@@ -1,0 +1,23 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "My first front-End portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sevenquarters/portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sevenquarters/portfolio/issues"
+  },
+  "homepage": "https://github.com/Sevenquarters/portfolio#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.8"
+  }
+}
