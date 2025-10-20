@@ -95,7 +95,7 @@ document.querySelector('#reserveModal form').addEventListener('submit', function
       <!-- 菜单 左对齐 7列 -->
       <nav class="col-7 d-flex align-items-center">
         <ul class="nav justify-content-start align-items-center w-100 gap-4" style="height:100%;">
-          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Drink</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Food</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Book</a></li>
@@ -108,7 +108,7 @@ document.querySelector('#reserveModal form').addEventListener('submit', function
   <main>
     <div class="container-fluid main-section-bg">
       <div class="row align-items-center">
-        <div class="col-md-6 custom-padding" >
+        <section class="col-md-6 custom-padding" >
           <div class="mb-4">
             <h1 class="my-4 lemon-title">Little Lemon</h1>
             <p class="text-white">Discover our delicious menu and cozy atmosphere.</p>
@@ -116,20 +116,65 @@ document.querySelector('#reserveModal form').addEventListener('submit', function
           <div class="mb-3">
             <h4 class="text-white">Chinese Cuisine</h4>
           </div>
-          <div class="mb-3">
-            <p class="text-white">Welcome to Little Lemon, where we bring authentic Chinese flavors to your table. Enjoy our signature dishes and experience the taste of tradition!</p>
+          <article class="mb-3">
+            <h2 class="text Sale_information">Enjoy 30% off this weekend!</h2>
+          </article>
+        </section>
+        <div class="col-md-6 text-center d-flex flex-column flex-md-row justify-content-center align-items-center gap-4">
+          <div class="food-img-wrapper">
+            <img src="asset/zuozongtang_chiken.jpeg" alt="Delicious Food" class="img-fluid rounded-5 food-img" style="max-width:350px;max-height:350px;margin-top:40px;margin-bottom:40px;">
           </div>
-          <div>
-            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#reserveModal">Reserve Table</button>
+          <div class="food-img-wrapper">
+            <img src="asset/orange_chiken.jpeg" alt="Delicious Food" class="img-fluid rounded-5 food-img" style="max-width:350px;max-height:350px;margin-top:40px;margin-bottom:40px;"> 
           </div>
-        </div>
-        <div class="col-md-6 text-center ">
-          <img src="asset/zuozongtang_chiken.jpeg" alt="Delicious Food" class="img-fluid rounded-5" style="max-width:350px;max-height:350px;margin-top:40px;margin-bottom:40px;">
         </div>
 
       </div>
     </div>
+    <!-- 新增三分区块 -->
+    <section class="container-fluid my-5">
+      <div class="row align-items-stretch">
+        <div class="col-md-4 p-4 text-center bg-light border-end">
+          <h3>Our New Dishes</h3>
+          <img 
+            src="asset/box_rice.jpeg"
+            alt="New Dish" class="img-fluid rounded-5 food-img" 
+            style="max-width:200px; height:250px; object-fit:cover; margin-top:20px; margin-bottom:20px;"
+            >
+          <p style="max-width:300px;" class="text-center mx-auto">Our new dishes feature a blend of traditional Chinese flavors and modern culinary creativity. Each plate is carefully crafted with fresh ingredients, bringing you a unique and memorable dining experience. Discover bold tastes, vibrant colors, and the true essence of Chinese cuisine in every bite!</p>
+        </div>
+        <div class="col-md-4 p-4 text-center bg-white border-end">
+          <h3>Reserve A Table</h3>
+          <img 
+            src="asset/full_table.jpeg" 
+            alt="New Dish" class="img-fluid rounded-5 food-img" 
+            style="max-width:200px; height:250px; object-fit:cover; margin-top:20px; margin-bottom:20px;"
+            >
+          <p style="max-width:300px;" class="text-center mx-auto">
+            Due to frequent full occupancy at our restaurant,
+            we kindly recommend making a reservation in advance to ensure your table. 
+            Thank you for your understanding and support!
+          </p>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#reserveModal">Reserve Table</button>
+        </div>
+        <div class="col-md-4 p-4 text-center bg-light">
+          <h3>Right Panel</h3>
+          <p>Content for the right panel.</p>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <footer class="container-fluid border-top py-3 mt-5">
+    <div class="row align-items-center">
+      <div class="col-6 d-flex align-items-center">
+        <img src="asset/Asset 20@4x.png" alt="Logo" style="height:80px;">
+      </div>
+      <div class="col-6 text-end">
+        <span class="text-muted">&copy; 2025 Little Lemon. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
   <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -1,3 +1,10 @@
+.food-img {
+  transition: transform 0.3s;
+}
+.food-img:hover {
+  transform: scale(1.08);
+}
+
 .lemon-title {
     color: #f1c902;
 }
@@ -20,7 +27,7 @@ body {
     color: #111;
 }
 .main-section-bg {
-  background-color: #416100; /* 你可以换成你喜欢的颜色 */
+  background-color: #244f45; /* 你可以换成你喜欢的颜色 */
 }
 .custom-padding {
   padding-left: 60px;
@@ -29,4 +36,9 @@ body {
   .custom-padding {
     padding-left: 160px;
   }
+}
+
+.Sale_information {
+  color: #ff6200;
+  font-weight: bold;
 }
