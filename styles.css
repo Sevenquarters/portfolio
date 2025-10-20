@@ -22,3 +22,11 @@ body {
 .main-section-bg {
   background-color: #416100; /* 你可以换成你喜欢的颜色 */
 }
+.custom-padding {
+  padding-left: 60px;
+}
+@media (min-width: 768px) {
+  .custom-padding {
+    padding-left: 160px;
+  }
+}

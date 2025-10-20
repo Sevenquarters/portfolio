@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +8,62 @@
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
+<div class="modal fade" id="reserveModal" tabindex="-1" aria-labelledby="reserveModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <form class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="reserveModalLabel">Reserve a Table</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="alert alert-success d-none" id="reserveSuccess" role="alert">
+          Reservation submitted successfully!
+        </div>
+        <div class="mb-3">
+          <label for="guests" class="form-label">Number of Guests</label>
+          <select class="form-select" id="guests" name="guests" required>
+            <option value="">Please Select</option>
+            <option>2</option>
+            <option>4</option>
+            <option>6</option>
+            <option>Over 6</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="date" class="form-label">date</label>
+          <input type="date" class="form-control" id="date" name="date" required>
+        </div>
+        <div class="mb-3">
+          <label for="mealTime" class="form-label">用餐时间</label>
+          <select class="form-select" id="mealTime" name="mealTime" required>
+            <option value="">Please Select</option>
+            <option value="breakfast">Breakfast 9:00-11:00</option>
+            <option value="lunch">Lunch 11:00-16:00</option>
+            <option value="dinner">Dinner 16:00-21:00</option>
+          </select>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-primary">Submit Reservation</button>
+      </div>
+    </form>
+  </div>
+</div>
+<script>
+document.querySelector('#reserveModal form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  document.getElementById('reserveSuccess').classList.remove('d-none');
+  // 可选：5秒后自动关闭modal
+  setTimeout(function() {
+    var modal = bootstrap.Modal.getInstance(document.getElementById('reserveModal'));
+    modal.hide();
+    document.getElementById('reserveSuccess').classList.add('d-none');
+    e.target.reset();
+  }, 5000);
+});
+</script>
+
+
 <body>
   <!-- 移动端导航栏（仅移动端显示） -->
   <nav class="navbar navbar-light bg-white d-flex d-md-none border-bottom px-3">
@@ -48,10 +104,11 @@
       </nav>
     </div>
   </header>
+
   <main>
     <div class="container-fluid main-section-bg">
       <div class="row align-items-center">
-        <div class="col-md-6 " style="padding-left: 80px;"">
+        <div class="col-md-6 custom-padding" >
           <div class="mb-4">
             <h1 class="my-4 lemon-title">Little Lemon</h1>
             <p class="text-white">Discover our delicious menu and cozy atmosphere.</p>
@@ -63,7 +120,7 @@
             <p class="text-white">Welcome to Little Lemon, where we bring authentic Chinese flavors to your table. Enjoy our signature dishes and experience the taste of tradition!</p>
           </div>
           <div>
-            <button class="btn btn-primary">Reserve Table</button>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#reserveModal">Reserve Table</button>
           </div>
         </div>
         <div class="col-md-6 text-center ">
