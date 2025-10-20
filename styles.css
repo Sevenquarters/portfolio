@@ -42,3 +42,17 @@ body {
   color: #ff6200;
   font-weight: bold;
 }
+.col-md-4 h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #244f45; /* 深绿色，与白色对比明显 */
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.col-md-4 p {
+  font-size: 1.08rem;
+  color: #155e63; /* 深蓝绿色，与白色对比明显 */
+  line-height: 1.9;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
