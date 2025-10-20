@@ -9,9 +9,70 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- 顶部中心 Logo -->
-  <div class="container text-center mt-4">
-    <img src="asset/Asset 16@4x.png" alt="Logo" class="img-fluid" style="max-width: 200px;">
-  </div>
+  <!-- 移动端导航栏（仅移动端显示） -->
+  <nav class="navbar navbar-light bg-white d-flex d-md-none border-bottom px-3">
+    <div class="w-100 d-flex justify-content-between align-items-center" style="height:56px;">
+      <div class="flex-grow-1 d-flex justify-content-center">
+        <img src="asset/Asset 16@4x.png" alt="Logo" style="height:40px;">
+      </div>
+      <button class="navbar-toggler ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNavMenu" aria-controls="mobileNavMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+    <div class="collapse" id="mobileNavMenu">
+      <ul class="navbar-nav mt-3">
+        <li class="nav-item"><a class="nav-link text-center" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link text-center" href="#">Drink</a></li>
+        <li class="nav-item"><a class="nav-link text-center" href="#">Food</a></li>
+        <li class="nav-item"><a class="nav-link text-center" href="#">Book</a></li>
+        <li class="nav-item"><a class="nav-link text-center" href="#">Shop</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- PC 导航：logo 占 7，菜单占 5，横向一行 -->
+  <header class="container-fluid py-1 border-bottom d-none d-md-block">
+    <div class="row align-items-center" style="height:100px;">
+      <!-- logo 右对齐 5列 -->
+      <div class="col-5 d-flex justify-content-end align-items-center">
+        <img src="asset/Asset 16@4x.png" alt="Logo" class="img-fluid" style="max-height:60px;">
+      </div>
+      <!-- 菜单 左对齐 7列 -->
+      <nav class="col-7 d-flex align-items-center">
+        <ul class="nav justify-content-start align-items-center w-100 gap-4" style="height:100%;">
+          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Drink</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Food</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Book</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="container-fluid main-section-bg">
+      <div class="row align-items-center">
+        <div class="col-md-6 " style="padding-left: 80px;"">
+          <div class="mb-4">
+            <h1 class="my-4 lemon-title">Little Lemon</h1>
+            <p class="text-white">Discover our delicious menu and cozy atmosphere.</p>
+          </div>
+          <div class="mb-3">
+            <h4 class="text-white">Chinese Cuisine</h4>
+          </div>
+          <div class="mb-3">
+            <p class="text-white">Welcome to Little Lemon, where we bring authentic Chinese flavors to your table. Enjoy our signature dishes and experience the taste of tradition!</p>
+          </div>
+          <div>
+            <button class="btn btn-primary">Reserve Table</button>
+          </div>
+        </div>
+        <div class="col-md-6 text-center ">
+          <img src="asset/zuozongtang_chiken.jpeg" alt="Delicious Food" class="img-fluid rounded-5" style="max-width:350px;max-height:350px;margin-top:40px;margin-bottom:40px;">
+        </div>
+
+      </div>
+    </div>
+  </main>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

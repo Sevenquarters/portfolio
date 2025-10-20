@@ -1,3 +1,15 @@
+.lemon-title {
+    color: #f1c902;
+}
+/* PC端导航 nav-link 默认黑色，悬停蓝色 */
+.d-md-block .nav-link {
+    color: #222 !important;
+    transition: color 0.2s;
+}
+.d-md-block .nav-link:hover {
+    color: #0d6efd !important;
+    text-decoration: underline;
+}
 /* styles.css - 占位文件 */
 
 /* 在此处添加项目样式 */
@@ -6,4 +18,7 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
     background: #fff;
     color: #111;
+}
+.main-section-bg {
+  background-color: #416100; /* 你可以换成你喜欢的颜色 */
 }
